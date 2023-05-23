@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Plantver2</string>
+    <string name="d_day_format">D + </string>
+    <string name="d_day">67</string>
+    <string name="Plant_name">뽀삐</string>
+    <string name="health_format">Health</string>
+    <string name="health">Good</string>
+    <string name="title_activity_setting">SettingActivity</string>
+</resources>

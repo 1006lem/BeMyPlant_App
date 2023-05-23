@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!--    <style name="Theme.PlantVer2" parent="android:Theme.Material.Light.NoActionBar" />-->
+    <style name="Theme.PlantVer2" parent="Theme.AppCompat.Light.NoActionBar" />
+
+    <!-- Base application theme. -->
+<!--    <style name="Base.Theme.PlantVer2" parent="android:Theme.Material.Light.NoActionBar">-->
+    <style name="Base.Theme.PlantVer2" parent="Theme.AppCompat.Light.NoActionBar" />
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </resources>
