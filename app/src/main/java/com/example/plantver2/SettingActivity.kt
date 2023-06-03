@@ -14,7 +14,7 @@ class SettingActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_setting)
 
-        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.menu_bottom_navigation)
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigation_main_menu)
 
         bottomNavigationView.selectedItemId = R.id.menu_setting
         val menuView = bottomNavigationView.getChildAt(0) as BottomNavigationMenuView

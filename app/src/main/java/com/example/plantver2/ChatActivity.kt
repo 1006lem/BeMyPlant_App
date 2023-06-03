@@ -13,7 +13,7 @@ class ChatActivity : AppCompatActivity() {
         setContentView(R.layout.activity_chat)
 
 
-        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.menu_bottom_navigation)
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigation_main_menu)
 
         bottomNavigationView.selectedItemId = R.id.menu_chat
         val menuView = bottomNavigationView.getChildAt(0) as BottomNavigationMenuView

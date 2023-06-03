@@ -9,7 +9,7 @@
     tools:context=".MainActivity">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/menu_bottom_navigation"
+        android:id="@+id/bottomNavigation_main_menu"
         android:layout_width="409dp"
         android:layout_height="45dp"
         android:layout_gravity="bottom"
@@ -23,7 +23,7 @@
         app:menu="@menu/menu" />
 
     <ImageView
-        android:id="@+id/flowerImage"
+        android:id="@+id/imageView_main_flower"
         android:layout_width="152dp"
         android:layout_height="227dp"
         android:src="@drawable/flower"
@@ -32,11 +32,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/frameLayout2"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.394"></ImageView>
 
     <FrameLayout
-        android:id="@+id/frameLayout2"
+        android:id="@+id/frameLayout_main_dDay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -51,7 +51,7 @@
 
 
         <ImageView
-            android:id="@+id/day_img"
+            android:id="@+id/imageView_main_dDayFrame"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:scaleType="fitXY"
@@ -59,6 +59,7 @@
 
 
         <LinearLayout
+            android:id="@+id/linearLayout_main_dDay"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
@@ -69,13 +70,13 @@
             android:paddingRight="15dp">
 
             <TextView
-                android:id="@+id/day_fix"
+                android:id="@+id/textView_main_dDayFrame"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@id/day_img"
-                android:layout_alignTop="@id/day_img"
-                android:layout_alignRight="@id/day_img"
-                android:layout_alignBottom="@id/day_img"
+                android:layout_alignLeft="@id/imageView_main_dDayFrame"
+                android:layout_alignTop="@id/imageView_main_dDayFrame"
+                android:layout_alignRight="@id/imageView_main_dDayFrame"
+                android:layout_alignBottom="@id/imageView_main_dDayFrame"
                 android:gravity="center"
                 android:text="@string/d_day_format"
                 android:textColor="@color/d_day_color"
@@ -83,13 +84,13 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/day"
+                android:id="@+id/textView_main_dDayValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@id/day_img"
-                android:layout_alignTop="@id/day_img"
-                android:layout_alignRight="@id/day_img"
-                android:layout_alignBottom="@id/day_img"
+                android:layout_alignLeft="@id/imageView_main_dDayFrame"
+                android:layout_alignTop="@id/imageView_main_dDayFrame"
+                android:layout_alignRight="@id/imageView_main_dDayFrame"
+                android:layout_alignBottom="@id/imageView_main_dDayFrame"
                 android:gravity="center"
                 android:text="@string/d_day"
                 android:textColor="@color/d_day_color"
@@ -100,7 +101,7 @@
     </FrameLayout>
 
     <TextView
-        android:id="@+id/plantName"
+        android:id="@+id/textView_main_flowerName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -115,7 +116,7 @@
         app:layout_constraintVertical_bias="0.688" />
 
     <FrameLayout
-        android:id="@+id/frameLayout"
+        android:id="@+id/frameLayout_main_health"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -130,7 +131,7 @@
 
 
         <ImageView
-            android:id="@+id/health_main"
+            android:id="@+id/imageView_main_healthFrame"
             android:layout_width="match_parent"
             android:layout_height="95dp"
             android:scaleType="fitXY"
@@ -138,6 +139,7 @@
 
 
         <LinearLayout
+            android:id="@+id/linearLayout_main_health"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
@@ -148,13 +150,13 @@
             android:paddingRight="5dp">
 
             <TextView
-                android:id="@+id/health_format"
+                android:id="@+id/textView_main_healthFrame"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@id/health_main"
-                android:layout_alignTop="@id/health_main"
-                android:layout_alignRight="@id/health_main"
-                android:layout_alignBottom="@id/health_main"
+                android:layout_alignLeft="@id/linearLayout_main_health"
+                android:layout_alignTop="@id/linearLayout_main_health"
+                android:layout_alignRight="@id/linearLayout_main_health"
+                android:layout_alignBottom="@id/linearLayout_main_health"
                 android:gravity="center"
                 android:text="@string/health_format"
                 android:textColor="#000000"
@@ -162,13 +164,13 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/health"
+                android:id="@+id/textView_main_healthValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@id/health_main"
-                android:layout_alignTop="@id/health_main"
-                android:layout_alignRight="@id/health_main"
-                android:layout_alignBottom="@id/health_main"
+                android:layout_alignLeft="@id/imageView_main_healthFrame"
+                android:layout_alignTop="@id/imageView_main_healthFrame"
+                android:layout_alignRight="@id/imageView_main_healthFrame"
+                android:layout_alignBottom="@id/imageView_main_healthFrame"
                 android:gravity="center"
                 android:paddingLeft="15dp"
                 android:text="@string/health"
@@ -176,8 +178,9 @@
                 android:textSize="32dp"
                 android:textStyle="bold" />
 
+
             <ImageView
-                android:id="@+id/regenerate"
+                android:id="@+id/imageView_main_healthRegenerate"
                 android:layout_width="wrap_content"
                 android:layout_height="41dp"
                 android:paddingLeft="30dp"

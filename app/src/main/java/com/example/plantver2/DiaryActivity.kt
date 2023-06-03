@@ -2,59 +2,34 @@ package com.example.plantver2
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.ComponentActivity
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomnavigation.BottomNavigationMenuView
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.navigation.NavigationView
 
-class DiaryActivity : ComponentActivity() {
+class DiaryActivity : AppCompatActivity(){//, CalendarAdapter.ItemClickListener {
 
+    lateinit var navController: NavController
+
+    private lateinit var calendarAdapter: CalendarAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_diary)
 
+        //navController = findNavController(R.id.nav_host_fragment)
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        navController = navHostFragment.navController
 
-        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.menu_bottom_navigation)
-
-        bottomNavigationView.selectedItemId = R.id.menu_diary
-        val menuView = bottomNavigationView.getChildAt(0) as BottomNavigationMenuView
-//        val selectedItemIndex = 2
-//
-//        menuView.getChildAt(selectedItemIndex).performClick()
-
-        bottomNavigationView.setOnNavigationItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.menu_home -> {
-                    // "홈" 메뉴 클릭 시 MainActivity로 이동
-                    val homeIntent = Intent(this@DiaryActivity, MainActivity::class.java)
-                    startActivity(homeIntent)
-                    true
-                }
-
-                R.id.menu_setting -> {
-                    // "setting" 메뉴 클릭 시 SettingActivity로 이동
-                    val boardIntent = Intent(this@DiaryActivity, SettingActivity::class.java)
-                    startActivity(boardIntent)
-                    true
-                }
-
-                R.id.menu_chat -> {
-                    // "채팅" 메뉴 클릭 시 ChatActivity로 이동
-                    val chatIntent = Intent(this@DiaryActivity, ChatActivity::class.java)
-                    startActivity(chatIntent)
-                    true
-                }
-
-                R.id.menu_diary -> {
-                    // "일기" 메뉴 클릭 시 DiaryActivity로 이동
-                    val diaryIntent = Intent(this@DiaryActivity, DiaryActivity::class.java)
-                    startActivity(diaryIntent)
-                    true
-                }
-
-                else -> false
-            }
-        }
     }
+
+    /*override fun onItemClick(view: View?, day: String?, isInMonth: Boolean) {
+        TODO("Not yet implemented")
+    }*/
+
 }

@@ -2,6 +2,7 @@ package com.example.plantver2
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.LinearLayout
 import androidx.activity.ComponentActivity
 import com.google.android.material.bottomnavigation.BottomNavigationMenuView
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -10,10 +11,22 @@ class MainActivity : ComponentActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.menu_bottom_navigation)
+
+        //------------------------센서
+        val linearLayout = findViewById<LinearLayout>(R.id.linearLayout_main_health)
+
+        linearLayout.setOnClickListener {
+            // "LinearLayout" 클릭 시 SensorActivity로 이동
+            val sensorIntent = Intent(this@MainActivity, SensorActivity::class.java)
+            startActivity(sensorIntent)
+        }
+        //------------------------하단바
+
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigation_main_menu)
         bottomNavigationView.selectedItemId = R.id.menu_home
 
         val menuView = bottomNavigationView.getChildAt(0) as BottomNavigationMenuView
